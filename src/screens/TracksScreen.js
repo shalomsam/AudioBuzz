@@ -36,7 +36,17 @@ class TracksScreen extends Component {
           data={this.props.tracks}
           keyExtractor={(item, index) => index.toString()}
           renderItem={({item, index}) => {
-            return <TrackView track={item} rank={index + 1} />
+            return (
+              <TouchableOpacity onPress={()=>{
+                this.props.navigation.navigate('PlayerScreen', {
+                  tracks: this.props.tracks,
+                  selectedTrack: item,
+                  selectedTrackIndex: index
+                });
+              }}>
+                <TrackView track={item} rank={index + 1} />
+              </TouchableOpacity>
+            )
           }}
         />
       </View>

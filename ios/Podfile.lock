@@ -1,0 +1,62 @@
+PODS:
+  - AppCenter/Analytics (1.13.2):
+    - AppCenter/Core
+  - AppCenter/Core (1.13.2)
+  - AppCenter/Crashes (1.13.2):
+    - AppCenter/Core
+  - AppCenterReactNativeShared (1.12.2):
+    - AppCenter/Core (= 1.13.2)
+  - React (0.58.5):
+    - React/Core (= 0.58.5)
+  - react-native-video (4.4.0):
+    - React
+    - react-native-video/Video (= 4.4.0)
+  - react-native-video/Video (4.4.0):
+    - React
+  - React/Core (0.58.5):
+    - yoga (= 0.58.5.React)
+  - RNGestureHandler (1.1.0):
+    - React
+  - RNSVG (9.2.4):
+    - React
+  - yoga (0.58.5.React)
+
+DEPENDENCIES:
+  - AppCenter/Analytics (~> 1.13.2)
+  - AppCenter/Crashes (~> 1.13.2)
+  - AppCenterReactNativeShared (~> 1.12.2)
+  - React (from `../node_modules/react-native`)
+  - react-native-video (from `../node_modules/react-native-video`)
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNSVG (from `../node_modules/react-native-svg`)
+  - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AppCenter
+    - AppCenterReactNativeShared
+
+EXTERNAL SOURCES:
+  React:
+    :path: "../node_modules/react-native"
+  react-native-video:
+    :path: "../node_modules/react-native-video"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
+  RNSVG:
+    :path: "../node_modules/react-native-svg"
+  yoga:
+    :path: "../node_modules/react-native/ReactCommon/yoga"
+
+SPEC CHECKSUMS:
+  AppCenter: bce7fe1098e8e8aeb70aaae1898600534069f549
+  AppCenterReactNativeShared: 6c0750b874f3242c47cb64083e23b835975c6aa2
+  React: 6cd5e6fcc3b6a52d2fb27a638f622139da710dff
+  react-native-video: aefb0f6a2a7cf21084a7ab3cf87354f40e7d7f3b
+  RNGestureHandler: b65d391f4f570178d657b99a16ec99d09b8656b0
+  RNSVG: 6fec2b50e65b4a01ba54155e8e546e0a1eeb16f4
+  yoga: 0e0009ffb2544aeead64a1209f3d488d3849947b
+
+PODFILE CHECKSUM: 59377a8ba417b27b8f171f25c1f1a1f9d1f46c75
+
+COCOAPODS: 1.7.0.beta.1
