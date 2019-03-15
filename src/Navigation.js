@@ -34,7 +34,8 @@ const routeOptions = {
 
 const DrawerStack = createDrawerNavigator(Routes, {
   initialRouteName: 'Home',
-  drawerWidth: 300
+  drawerWidth: 300,
+  unmountInactiveRoutes: true
 });
 
 const RouteStack = createStackNavigator({

@@ -17,9 +17,28 @@ class TracksScreen extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const library = this.props.navigation.getParam('library') || 'mixed';
     this.props.tracksFetch(library);
+  }
+
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    const library = nextProps.navigation.state.params.library;
+
+    // if (nextProps.navigation.state.params.library !== this.props.library) {
+    //   this.props.tracksFetch(library);
+    // }
+    // return true;
+
+    if (nextProps !== this.props) {
+      if (nextProps.navigation.state.params.library !== this.props.library) {
+        this.props.tracksFetch(library);
+      }
+
+      return true;
+    }
+
+    return false;
   }
 
   renderLoading() {
