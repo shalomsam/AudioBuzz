@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, StatusBar }  from 'react-native';
 import Reducers from './reducers';
-import Routes from './Routes';
+import Navigation from './Navigation';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
@@ -22,7 +22,7 @@ export default class App extends Component {
       <Provider store={store}>
         <View style={{ flex: 1 }}>
           <StatusBar barStyle='light-content' backgroundColor={theme.headerBgColor} />
-          <Routes />
+          <Navigation />
         </View>
       </Provider>
     );
