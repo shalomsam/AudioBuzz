@@ -13,6 +13,7 @@
     "@fortawesome/react-native-fontawesome": "^0.1.0",
     "react": "16.6.3",
     "react-native": "0.58.5",
+    "react-native-code-push": "^5.5.3",
     "react-native-gesture-handler": "^1.0.17",
     "react-native-svg": "^9.2.4",
     "react-navigation": "^3.3.2",

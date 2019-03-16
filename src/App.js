@@ -6,6 +6,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { theme } from './theme';
+import codePush from "react-native-code-push";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faYoutube, faItunesNote, faLastfm, faSpotify } from '@fortawesome/free-brands-svg-icons';
 import { faMusic, faBars, faPlay, faPause, faStepForward, faStepBackward, faBackward, faPlayCircle, faCaretSquareLeft } from '@fortawesome/free-solid-svg-icons';
@@ -17,7 +18,7 @@ library.add(faMusic, faBars, faPlay, faPause, faStepForward, faStepBackward, faY
 
 GLOBAL.XMLHttpRequest = GLOBAL.originalXMLHttpRequest || GLOBAL.XMLHttpRequest;
 
-export default class App extends Component {
+class App extends Component {
   render() {
     const store = createStore(Reducers, applyMiddleware(thunk));
 
@@ -31,3 +32,6 @@ export default class App extends Component {
     );
   }
 }
+
+let codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_START };
+export default codePush(codePushOptions)(App);
