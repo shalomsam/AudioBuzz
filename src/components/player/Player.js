@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import Video from 'react-native-video';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import MediaControls from './MediaControls';
 
@@ -52,18 +51,7 @@ export default class Player extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.videoWrp}>
-          <Video
-            source={source}
-            ref={(ref) => {
-              this.player = ref
-            }}
-            onBuffer={this.handleBuffer}
-            onError={this.handleError}
-            paused={paused}
-            onLoad={this.setDuration}
-            onProgress={this.setProgress}
-            style={styles.video}
-          />
+          
         </View>
         <View>
           <MediaControls

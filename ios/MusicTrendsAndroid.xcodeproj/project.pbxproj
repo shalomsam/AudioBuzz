@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -12,8 +13,8 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* MusicTrendsAndroidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MusicTrendsAndroidTests.m */; };
-		0A3954329D67AD76DE20D927 /* libPods-MusicTrendsAndroid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71953E4229E58C34A6563346 /* libPods-MusicTrendsAndroid.a */; };
 		11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		1237986A00B34C49A4C50F0F /* libRNSVG-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DC6AC25D8A453785373BF7 /* libRNSVG-tvOS.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -23,9 +24,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		180E107B0B6BE9B229D9CC4B /* libPods-MusicTrendsAndroid-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE817A1E8FAE88C752B6ED7A /* libPods-MusicTrendsAndroid-tvOSTests.a */; };
+		18187A32B9F97C2AE1D59162 /* Pods_MusicTrendsAndroid_tvOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766B299C0C4BCBE310922203 /* Pods_MusicTrendsAndroid_tvOSTests.framework */; };
+		21B3058DA9543496234773B7 /* Pods_MusicTrendsAndroidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2C2C65B00A159CE1B06ED0 /* Pods_MusicTrendsAndroidTests.framework */; };
+		229E19FD5708444C84BF484F /* libAppCenterReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C65264BE78644699546FF79 /* libAppCenterReactNative.a */; };
 		279D3E87790448BD89E918F4 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E323E734F814729BF4F83CE /* AppCenter-Config.plist */; };
-		2CC87A7B267FB7CA6462BE84 /* libPods-MusicTrendsAndroid-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C6BA802DFE25377536C86E /* libPods-MusicTrendsAndroid-tvOS.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -39,11 +41,14 @@
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* MusicTrendsAndroidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MusicTrendsAndroidTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
-		4F97A2DBAEA74C64AF935776 /* libAppCenterReactNativeAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E0F71681D84CA0821640D0 /* libAppCenterReactNativeAnalytics.a */; };
-		6A7A14B1B69B451C862C714E /* libAppCenterReactNativeCrashes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED72EF845EEA4F0A9470F9AF /* libAppCenterReactNativeCrashes.a */; };
-		72AD99795FE0F7B577E871E5 /* libPods-MusicTrendsAndroidTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C9C970E65EFA71BC4A7A19 /* libPods-MusicTrendsAndroidTests.a */; };
+		67B9668F4B6F4FC5A30AB46D /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B3E732CCE04280ABE15AC3 /* libRNGestureHandler.a */; };
+		77ECA6FF286A44B5B754BB94 /* libAppCenterReactNativeAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 582FD84A3F4C4538AD82BFA2 /* libAppCenterReactNativeAnalytics.a */; };
+		7AFDB52FEC564122ABF9C46C /* libAppCenterReactNativeCrashes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAEBADD3CEC4FB1BD711987 /* libAppCenterReactNativeCrashes.a */; };
+		7B96577B59604613BE962C34 /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C97B72B5B1B34C9F9F733305 /* libRNSVG.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		AA77F39937B54BECAC0C66E5 /* libAppCenterReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 694D7F6FC67E489982ABF4F3 /* libAppCenterReactNative.a */; };
+		8EF0FFB3C38C4881CBDC6C49 /* Pods_MusicTrendsAndroid_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8E5C41041D23E33D8DE011 /* Pods_MusicTrendsAndroid_tvOS.framework */; };
+		930A4469B66441FAABE6611E /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD880BE438A4D72B476AEDF /* libRNGestureHandler-tvOS.a */; };
+		991EAB1E202798B2EF10772C /* Pods_MusicTrendsAndroid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DB15CA70F5EF1E3384C4A6 /* Pods_MusicTrendsAndroid.framework */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
@@ -295,6 +300,55 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
+		D8402221223C47A700332CE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9915FC57F3E2415481A49DDE /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNGestureHandler;
+		};
+		D8402223223C47A700332CE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9915FC57F3E2415481A49DDE /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B5C32A36220C603B000FFB8D;
+			remoteInfo = "RNGestureHandler-tvOS";
+		};
+		D840225D223C47D600332CE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBA050350FB7482E91AA6527 /* RNSVG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CF68AC11AF0540F00FF9E5C;
+			remoteInfo = RNSVG;
+		};
+		D840225F223C47D600332CE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBA050350FB7482E91AA6527 /* RNSVG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 94DDAC5C1F3D024300EED511;
+			remoteInfo = "RNSVG-tvOS";
+		};
+		D840229B223C47E300332CE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DCE996DE984D3D9470664C /* AppCenterReactNative.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C35AEC211EF91F9300931F0C;
+			remoteInfo = AppCenterReactNative;
+		};
+		D84022E8223C480C00332CE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A08F0B522E1345EB8F3D0621 /* AppCenterReactNativeAnalytics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 548694001D8384E600E6685A;
+			remoteInfo = AppCenterReactNativeAnalytics;
+		};
+		D8402338223C482800332CE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C256B0D86374438D855AAF02 /* AppCenterReactNativeCrashes.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5419C2701D824AA700DDF3A1;
+			remoteInfo = AppCenterReactNativeCrashes;
+		};
 		D8C54CB62233C8B40053C5B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
@@ -323,32 +377,10 @@
 			remoteGlobalIDString = ED296FEE214C9CF800B7C4FE;
 			remoteInfo = "jsiexecutor-tvOS";
 		};
-		D8C54CC12233C8B50053C5B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 98D12BCF02984D9D8FC33CC2 /* AppCenterReactNativeCrashes.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5419C2701D824AA700DDF3A1;
-			remoteInfo = AppCenterReactNativeCrashes;
-		};
-		D8C54CC62233C8B50053C5B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D03833CD9BFB42059B050086 /* AppCenterReactNativeAnalytics.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 548694001D8384E600E6685A;
-			remoteInfo = AppCenterReactNativeAnalytics;
-		};
-		D8C54CCB2233C8B50053C5B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00B8D7D92E074FA993635621 /* AppCenterReactNative.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C35AEC211EF91F9300931F0C;
-			remoteInfo = AppCenterReactNative;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00B8D7D92E074FA993635621 /* AppCenterReactNative.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNative.xcodeproj; path = ../node_modules/appcenter/ios/AppCenterReactNative.xcodeproj; sourceTree = "<group>"; };
 		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
 		00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTGeolocation.xcodeproj; path = "../node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj"; sourceTree = "<group>"; };
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
@@ -368,32 +400,39 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MusicTrendsAndroid/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		1C64B18D74E6916B406C95C4 /* Pods-MusicTrendsAndroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTrendsAndroid.release.xcconfig"; path = "Target Support Files/Pods-MusicTrendsAndroid/Pods-MusicTrendsAndroid.release.xcconfig"; sourceTree = "<group>"; };
+		2A8E5C41041D23E33D8DE011 /* Pods_MusicTrendsAndroid_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicTrendsAndroid_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* MusicTrendsAndroid-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MusicTrendsAndroid-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* MusicTrendsAndroid-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MusicTrendsAndroid-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DC94B7B43573AB11DE7DBA /* Pods-MusicTrendsAndroid-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTrendsAndroid-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-MusicTrendsAndroid-tvOS/Pods-MusicTrendsAndroid-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		42C9C970E65EFA71BC4A7A19 /* libPods-MusicTrendsAndroidTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicTrendsAndroidTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		582FD84A3F4C4538AD82BFA2 /* libAppCenterReactNativeAnalytics.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNativeAnalytics.a; sourceTree = "<group>"; };
+		59B3E732CCE04280ABE15AC3 /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
-		61E0F71681D84CA0821640D0 /* libAppCenterReactNativeAnalytics.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNativeAnalytics.a; sourceTree = "<group>"; };
-		694D7F6FC67E489982ABF4F3 /* libAppCenterReactNative.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNative.a; sourceTree = "<group>"; };
-		71953E4229E58C34A6563346 /* libPods-MusicTrendsAndroid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicTrendsAndroid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		766B299C0C4BCBE310922203 /* Pods_MusicTrendsAndroid_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicTrendsAndroid_tvOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7E323E734F814729BF4F83CE /* AppCenter-Config.plist */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "MusicTrendsAndroid/AppCenter-Config.plist"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		83432367A194A0B09DC8522F /* Pods-MusicTrendsAndroid-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTrendsAndroid-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MusicTrendsAndroid-tvOSTests/Pods-MusicTrendsAndroid-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A907470D57751C0897BF5F0 /* Pods-MusicTrendsAndroid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTrendsAndroid.debug.xcconfig"; path = "Target Support Files/Pods-MusicTrendsAndroid/Pods-MusicTrendsAndroid.debug.xcconfig"; sourceTree = "<group>"; };
-		98D12BCF02984D9D8FC33CC2 /* AppCenterReactNativeCrashes.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeCrashes.xcodeproj; path = "../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes.xcodeproj"; sourceTree = "<group>"; };
+		91DB15CA70F5EF1E3384C4A6 /* Pods_MusicTrendsAndroid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicTrendsAndroid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9915FC57F3E2415481A49DDE /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		99B70BC2D09D11055511BF3F /* Pods-MusicTrendsAndroidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTrendsAndroidTests.release.xcconfig"; path = "Target Support Files/Pods-MusicTrendsAndroidTests/Pods-MusicTrendsAndroidTests.release.xcconfig"; sourceTree = "<group>"; };
+		9C65264BE78644699546FF79 /* libAppCenterReactNative.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNative.a; sourceTree = "<group>"; };
+		9FAEBADD3CEC4FB1BD711987 /* libAppCenterReactNativeCrashes.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNativeCrashes.a; sourceTree = "<group>"; };
+		A08F0B522E1345EB8F3D0621 /* AppCenterReactNativeAnalytics.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeAnalytics.xcodeproj; path = "../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics.xcodeproj"; sourceTree = "<group>"; };
 		A802F08223B45EF63CABE5D1 /* Pods-MusicTrendsAndroid-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTrendsAndroid-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-MusicTrendsAndroid-tvOSTests/Pods-MusicTrendsAndroid-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		AE2C2C65B00A159CE1B06ED0 /* Pods_MusicTrendsAndroidTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicTrendsAndroidTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7DC6AC25D8A453785373BF7 /* libRNSVG-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNSVG-tvOS.a"; sourceTree = "<group>"; };
 		B9737C5EBAFB4BF2929A293C /* Pods-MusicTrendsAndroidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTrendsAndroidTests.debug.xcconfig"; path = "Target Support Files/Pods-MusicTrendsAndroidTests/Pods-MusicTrendsAndroidTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CE817A1E8FAE88C752B6ED7A /* libPods-MusicTrendsAndroid-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicTrendsAndroid-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D03833CD9BFB42059B050086 /* AppCenterReactNativeAnalytics.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeAnalytics.xcodeproj; path = "../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics.xcodeproj"; sourceTree = "<group>"; };
+		C256B0D86374438D855AAF02 /* AppCenterReactNativeCrashes.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeCrashes.xcodeproj; path = "../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes.xcodeproj"; sourceTree = "<group>"; };
+		C7DCE996DE984D3D9470664C /* AppCenterReactNative.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNative.xcodeproj; path = ../node_modules/appcenter/ios/AppCenterReactNative.xcodeproj; sourceTree = "<group>"; };
+		C97B72B5B1B34C9F9F733305 /* libRNSVG.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSVG.a; sourceTree = "<group>"; };
 		D3161CCB70B9C06AB4EB5AC1 /* Pods-MusicTrendsAndroid-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicTrendsAndroid-tvOS.release.xcconfig"; path = "Target Support Files/Pods-MusicTrendsAndroid-tvOS/Pods-MusicTrendsAndroid-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		E9C6BA802DFE25377536C86E /* libPods-MusicTrendsAndroid-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicTrendsAndroid-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDD880BE438A4D72B476AEDF /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; };
+		EBA050350FB7482E91AA6527 /* RNSVG.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSVG.xcodeproj; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		ED72EF845EEA4F0A9470F9AF /* libAppCenterReactNativeCrashes.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNativeCrashes.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,7 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
-				72AD99795FE0F7B577E871E5 /* libPods-MusicTrendsAndroidTests.a in Frameworks */,
+				21B3058DA9543496234773B7 /* Pods_MusicTrendsAndroidTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,10 +462,12 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				0A3954329D67AD76DE20D927 /* libPods-MusicTrendsAndroid.a in Frameworks */,
-				AA77F39937B54BECAC0C66E5 /* libAppCenterReactNative.a in Frameworks */,
-				4F97A2DBAEA74C64AF935776 /* libAppCenterReactNativeAnalytics.a in Frameworks */,
-				6A7A14B1B69B451C862C714E /* libAppCenterReactNativeCrashes.a in Frameworks */,
+				67B9668F4B6F4FC5A30AB46D /* libRNGestureHandler.a in Frameworks */,
+				7B96577B59604613BE962C34 /* libRNSVG.a in Frameworks */,
+				229E19FD5708444C84BF484F /* libAppCenterReactNative.a in Frameworks */,
+				991EAB1E202798B2EF10772C /* Pods_MusicTrendsAndroid.framework in Frameworks */,
+				77ECA6FF286A44B5B754BB94 /* libAppCenterReactNativeAnalytics.a in Frameworks */,
+				7AFDB52FEC564122ABF9C46C /* libAppCenterReactNativeCrashes.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +484,9 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
-				2CC87A7B267FB7CA6462BE84 /* libPods-MusicTrendsAndroid-tvOS.a in Frameworks */,
+				930A4469B66441FAABE6611E /* libRNGestureHandler-tvOS.a in Frameworks */,
+				1237986A00B34C49A4C50F0F /* libRNSVG-tvOS.a in Frameworks */,
+				8EF0FFB3C38C4881CBDC6C49 /* Pods_MusicTrendsAndroid_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,7 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */,
-				180E107B0B6BE9B229D9CC4B /* libPods-MusicTrendsAndroid-tvOSTests.a in Frameworks */,
+				18187A32B9F97C2AE1D59162 /* Pods_MusicTrendsAndroid_tvOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,10 +624,10 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
-				71953E4229E58C34A6563346 /* libPods-MusicTrendsAndroid.a */,
-				E9C6BA802DFE25377536C86E /* libPods-MusicTrendsAndroid-tvOS.a */,
-				CE817A1E8FAE88C752B6ED7A /* libPods-MusicTrendsAndroid-tvOSTests.a */,
-				42C9C970E65EFA71BC4A7A19 /* libPods-MusicTrendsAndroidTests.a */,
+				91DB15CA70F5EF1E3384C4A6 /* Pods_MusicTrendsAndroid.framework */,
+				2A8E5C41041D23E33D8DE011 /* Pods_MusicTrendsAndroid_tvOS.framework */,
+				766B299C0C4BCBE310922203 /* Pods_MusicTrendsAndroid_tvOSTests.framework */,
+				AE2C2C65B00A159CE1B06ED0 /* Pods_MusicTrendsAndroidTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -622,9 +665,11 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				00B8D7D92E074FA993635621 /* AppCenterReactNative.xcodeproj */,
-				D03833CD9BFB42059B050086 /* AppCenterReactNativeAnalytics.xcodeproj */,
-				98D12BCF02984D9D8FC33CC2 /* AppCenterReactNativeCrashes.xcodeproj */,
+				9915FC57F3E2415481A49DDE /* RNGestureHandler.xcodeproj */,
+				EBA050350FB7482E91AA6527 /* RNSVG.xcodeproj */,
+				C7DCE996DE984D3D9470664C /* AppCenterReactNative.xcodeproj */,
+				A08F0B522E1345EB8F3D0621 /* AppCenterReactNativeAnalytics.xcodeproj */,
+				C256B0D86374438D855AAF02 /* AppCenterReactNativeCrashes.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -676,38 +721,67 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B1AF14ADD18E4A6F876E6333 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D840221D223C47A700332CE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8402222223C47A700332CE9 /* libRNGestureHandler.a */,
+				D8402224223C47A700332CE9 /* libRNGestureHandler-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8402259223C47D600332CE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D840225E223C47D600332CE9 /* libRNSVG.a */,
+				D8402260223C47D600332CE9 /* libRNSVG-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8402298223C47E300332CE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D840229C223C47E300332CE9 /* libAppCenterReactNative.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D84022E5223C480C00332CE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D84022E9223C480C00332CE9 /* libAppCenterReactNativeAnalytics.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8402335223C482700332CE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8402339223C482800332CE9 /* libAppCenterReactNativeCrashes.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D8C54C902233C8B40053C5B7 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				694D7F6FC67E489982ABF4F3 /* libAppCenterReactNative.a */,
-				61E0F71681D84CA0821640D0 /* libAppCenterReactNativeAnalytics.a */,
-				ED72EF845EEA4F0A9470F9AF /* libAppCenterReactNativeCrashes.a */,
+				59B3E732CCE04280ABE15AC3 /* libRNGestureHandler.a */,
+				DDD880BE438A4D72B476AEDF /* libRNGestureHandler-tvOS.a */,
+				C97B72B5B1B34C9F9F733305 /* libRNSVG.a */,
+				B7DC6AC25D8A453785373BF7 /* libRNSVG-tvOS.a */,
+				9C65264BE78644699546FF79 /* libAppCenterReactNative.a */,
+				582FD84A3F4C4538AD82BFA2 /* libAppCenterReactNativeAnalytics.a */,
+				9FAEBADD3CEC4FB1BD711987 /* libAppCenterReactNativeCrashes.a */,
 			);
 			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		D8C54CBE2233C8B50053C5B7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D8C54CC22233C8B50053C5B7 /* libAppCenterReactNativeCrashes.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D8C54CC32233C8B50053C5B7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D8C54CC72233C8B50053C5B7 /* libAppCenterReactNativeAnalytics.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D8C54CC82233C8B50053C5B7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D8C54CCC2233C8B50053C5B7 /* libAppCenterReactNative.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		FA748B25FB4D8CFBCD218231 /* Pods */ = {
@@ -724,14 +798,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		B1AF14ADD18E4A6F876E6333 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -825,6 +891,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = UFRUB954U3;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -849,16 +918,16 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = D8C54CC82233C8B50053C5B7 /* Products */;
-					ProjectRef = 00B8D7D92E074FA993635621 /* AppCenterReactNative.xcodeproj */;
+					ProductGroup = D8402298223C47E300332CE9 /* Products */;
+					ProjectRef = C7DCE996DE984D3D9470664C /* AppCenterReactNative.xcodeproj */;
 				},
 				{
-					ProductGroup = D8C54CC32233C8B50053C5B7 /* Products */;
-					ProjectRef = D03833CD9BFB42059B050086 /* AppCenterReactNativeAnalytics.xcodeproj */;
+					ProductGroup = D84022E5223C480C00332CE9 /* Products */;
+					ProjectRef = A08F0B522E1345EB8F3D0621 /* AppCenterReactNativeAnalytics.xcodeproj */;
 				},
 				{
-					ProductGroup = D8C54CBE2233C8B50053C5B7 /* Products */;
-					ProjectRef = 98D12BCF02984D9D8FC33CC2 /* AppCenterReactNativeCrashes.xcodeproj */;
+					ProductGroup = D8402335223C482700332CE9 /* Products */;
+					ProjectRef = C256B0D86374438D855AAF02 /* AppCenterReactNativeCrashes.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
@@ -907,6 +976,14 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = D840221D223C47A700332CE9 /* Products */;
+					ProjectRef = 9915FC57F3E2415481A49DDE /* RNGestureHandler.xcodeproj */;
+				},
+				{
+					ProductGroup = D8402259223C47D600332CE9 /* Products */;
+					ProjectRef = EBA050350FB7482E91AA6527 /* RNSVG.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1151,6 +1228,55 @@
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		D8402222223C47A700332CE9 /* libRNGestureHandler.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNGestureHandler.a;
+			remoteRef = D8402221223C47A700332CE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8402224223C47A700332CE9 /* libRNGestureHandler-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNGestureHandler-tvOS.a";
+			remoteRef = D8402223223C47A700332CE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D840225E223C47D600332CE9 /* libRNSVG.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSVG.a;
+			remoteRef = D840225D223C47D600332CE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8402260223C47D600332CE9 /* libRNSVG-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNSVG-tvOS.a";
+			remoteRef = D840225F223C47D600332CE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D840229C223C47E300332CE9 /* libAppCenterReactNative.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAppCenterReactNative.a;
+			remoteRef = D840229B223C47E300332CE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D84022E9223C480C00332CE9 /* libAppCenterReactNativeAnalytics.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAppCenterReactNativeAnalytics.a;
+			remoteRef = D84022E8223C480C00332CE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D8402339223C482800332CE9 /* libAppCenterReactNativeCrashes.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAppCenterReactNativeCrashes.a;
+			remoteRef = D8402338223C482800332CE9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		D8C54CB72233C8B40053C5B7 /* libjsi.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1177,27 +1303,6 @@
 			fileType = archive.ar;
 			path = "libjsiexecutor-tvOS.a";
 			remoteRef = D8C54CBC2233C8B40053C5B7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D8C54CC22233C8B50053C5B7 /* libAppCenterReactNativeCrashes.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libAppCenterReactNativeCrashes.a;
-			remoteRef = D8C54CC12233C8B50053C5B7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D8C54CC72233C8B50053C5B7 /* libAppCenterReactNativeAnalytics.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libAppCenterReactNativeAnalytics.a;
-			remoteRef = D8C54CC62233C8B50053C5B7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D8C54CCC2233C8B50053C5B7 /* libAppCenterReactNative.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libAppCenterReactNative.a;
-			remoteRef = D8C54CCB2233C8B50053C5B7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1430,6 +1535,8 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics",
 					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
@@ -1439,6 +1546,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1461,6 +1572,8 @@
 				COPY_PHASE_STRIP = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics",
 					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
@@ -1470,6 +1583,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1491,8 +1608,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = UFRUB954U3;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics",
 					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
@@ -1504,7 +1624,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.MusicTrends;
 				PRODUCT_NAME = MusicTrendsAndroid;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1516,8 +1636,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UFRUB954U3;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics",
 					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
@@ -1529,7 +1652,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.MusicTrends;
 				PRODUCT_NAME = MusicTrendsAndroid;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1550,6 +1673,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics",
 					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
@@ -1558,6 +1683,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1589,6 +1718,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics",
 					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
@@ -1597,6 +1728,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1627,6 +1762,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics",
 					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
@@ -1635,6 +1772,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1665,6 +1806,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 					"$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics",
 					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
@@ -1673,6 +1816,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",

@@ -137,11 +137,9 @@ android {
 }
 
 dependencies {
-    implementation project(':react-native-youtube')
     implementation project(':appcenter-crashes')
     implementation project(':appcenter-analytics')
     implementation project(':appcenter')
-    implementation project(':react-native-video')
     implementation project(':react-native-svg')
     implementation project(':react-native-gesture-handler')
     implementation fileTree(include: ['*.jar'], dir: 'libs')

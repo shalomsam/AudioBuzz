@@ -15,8 +15,6 @@
     "react-native": "0.58.5",
     "react-native-gesture-handler": "^1.0.17",
     "react-native-svg": "^9.2.4",
-    "react-native-video": "^4.4.0",
-    "react-native-youtube": "^1.1.0",
     "react-navigation": "^3.3.2",
     "react-redux": "^6.0.1",
     "redux": "^4.0.1",
