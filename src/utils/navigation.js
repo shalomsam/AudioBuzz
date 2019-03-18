@@ -1,6 +1,6 @@
-export const libraryToName = (library) => {
+export const libraryToName = (library, location = 'us') => {
   const mapping = {
-    mixed: 'Mixed Tape',
+    mixed: location.toUpperCase() + ' TOP 100',
     applemusic: 'Apple Music',
     lastfm: 'LastFm',
     spotify: 'Spotify',
@@ -13,10 +13,10 @@ export const libraryToName = (library) => {
 export const libraryToIconName = (library) => {
   const mapping = {
     mixed: 'music',
-    applemusic: ['fab','itunes-note'],
-    lastfm: ['fab','lastfm'],
-    spotify: ['fab','spotify'],
-    youtube: ['fab','youtube']
+    applemusic: ['fab', 'itunes-note'],
+    lastfm: ['fab', 'lastfm'],
+    spotify: ['fab', 'spotify'],
+    youtube: ['fab', 'youtube']
   };
 
   return mapping[library] || 'music';

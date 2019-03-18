@@ -1,50 +1,34 @@
 import React from 'react';
+import { TouchableWithoutFeedback, View } from 'react-native';
 import { createStackNavigator, createDrawerNavigator, createAppContainer } from 'react-navigation';
-import TracksScreen from './screens/TracksScreen';
 import PlayerScreen from './screens/PlayerScreen';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { libraryToName } from './utils';
 import { colors } from './theme';
 import Routes from './Routes';
-
-const routeOptions = {
-  defaultNavigationOptions: ({navigation}) => {
-    const library = navigation.getParam('library') || 'mixed';
-    return {
-      title: libraryToName(library),
-      headerStyle: {
-        backgroundColor: '#343a40',
-      },
-      headerLeft: <FontAwesomeIcon 
-        icon="bars" 
-        onPress={() => {navigation.toggleDrawer()} } 
-        size={20}
-        color={colors.white}
-        style={{marginLeft: 10}}
-      />,
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-        color: '#fff'
-      }
-    }
-  },
-  headerLayoutPreset: 'center',
-};
+import { Navigation } from './styles';
+import Drawer from './components/ui/Drawer';
 
 const DrawerStack = createDrawerNavigator(Routes, {
   initialRouteName: 'Home',
   drawerWidth: 300,
-  unmountInactiveRoutes: true
+  unmountInactiveRoutes: true,
+  contentComponent: (props) => (
+    <Drawer {...props} />
+  )
 });
 
-const RouteStack = createStackNavigator({
-  DrawerStack: {
-    screen: DrawerStack
+const RouteStack = createStackNavigator(
+  {
+    DrawerStack: {
+      screen: DrawerStack
+    },
+    PlayerScreen: {
+      screen: PlayerScreen
+    }
   },
-  PlayerScreen: {
-    screen: PlayerScreen
-  }
-}, routeOptions);
+  {
+    headerMode: 'none'
+  });
 
 export default createAppContainer(RouteStack);

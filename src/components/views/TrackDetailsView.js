@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Image, Text, Linking, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { colors } from '../../theme';
+import Header from '../ui/Header';
 
 export default class TrackDetailsView extends Component {
 
@@ -19,7 +20,7 @@ export default class TrackDetailsView extends Component {
   renderThumbnail = (track) => {
     let thumbType = null;
     let thumbnail;
-    if (track.hasOwnProperty('thumbnail')) {
+    if (track.hasOwnProperty('thumbnails')) {
       if (track.thumbnails.hasOwnProperty('medium')) {
         thumbType = 'medium'
       } else if (track.thumbnails.hasOwnProperty('default')) {
@@ -28,8 +29,7 @@ export default class TrackDetailsView extends Component {
     }
 
     if (thumbType !== null) {
-      console.log("thumbnail >>", track.thumbnails[thumbType].url);
-      thumbnail = <Image 
+      thumbnail = <Image
         resizeMode='cover'
         source={{ uri: track.thumbnails[thumbType].url }}
         style={{
@@ -49,7 +49,7 @@ export default class TrackDetailsView extends Component {
     links = Object.keys(track.links);
     links = links.map((key, index) => {
       return (
-        <TouchableOpacity 
+        <TouchableOpacity
           key={index}
           onPress={() => {
             console.log("Link >> ", track.links[key]);
@@ -75,7 +75,7 @@ export default class TrackDetailsView extends Component {
     if (this.state.trackIndex !== 0) {
       const index = this.state.trackIndex - 1;
       const track = this.state.tracks[index];
-      this.setState({trackIndex: index, track: track});
+      this.setState({ trackIndex: index, track: track });
     }
   }
 
@@ -83,7 +83,7 @@ export default class TrackDetailsView extends Component {
     if (this.state.trackIndex !== (this.state.tracks.length - 1)) {
       const index = this.state.trackIndex + 1;
       const track = this.state.tracks[index];
-      this.setState({trackIndex: index, track: track});
+      this.setState({ trackIndex: index, track: track });
     }
   }
 
@@ -91,6 +91,17 @@ export default class TrackDetailsView extends Component {
     const { track } = this.state;
     return (
       <View style={styles.container}>
+        <Header
+          leftIconPress={() => this.props.navigation.goBack()}
+          leftIcon='caret-square-left'
+          style={{
+            position: 'absolute',
+            zIndex: 1,
+            backgroundColor: 'transparent',
+            height: 50,
+            width: '100%'
+          }}
+        />
         <View style={styles.thumbnailWrp}>
           {this.renderThumbnail(track)}
         </View>
@@ -105,9 +116,9 @@ export default class TrackDetailsView extends Component {
             <TouchableOpacity onPress={this.onBack} style={[styles.touchIcons, styles.touchIconsSmall]}>
               <FontAwesomeIcon icon="step-backward" size={styles.backForwardIcons.fontSize} />
             </TouchableOpacity>
-            
+
             {this.renderLinks(track)}
-            
+
             <TouchableOpacity onPress={this.onForward} style={[styles.touchIcons, styles.touchIconsSmall]}>
               <FontAwesomeIcon icon="step-forward" size={styles.backForwardIcons.fontSize} />
             </TouchableOpacity>

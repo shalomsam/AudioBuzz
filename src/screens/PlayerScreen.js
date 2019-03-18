@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Linking } from 'react-native';
-import Player from '../components/player/Player'
+import { connect } from 'react-redux';
 import TrackDetailsView from '../components/views/TrackDetailsView';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { colors } from '../theme';
@@ -10,12 +10,12 @@ class PlayerScreen extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
       title: 'Track Details',
-      headerLeft: <FontAwesomeIcon 
-        icon="caret-square-left" 
-        onPress={() => {navigation.goBack()} } 
+      headerLeft: <FontAwesomeIcon
+        icon="caret-square-left"
+        onPress={() => { navigation.goBack() }}
         size={20}
         color={colors.white}
-        style={{marginLeft: 10}}
+        style={{ marginLeft: 10 }}
       />
     }
   }
@@ -37,10 +37,10 @@ class PlayerScreen extends Component {
     const tracks = this.props.navigation.getParam('tracks');
     const selectedTrack = this.props.navigation.getParam('selectedTrack');
     const selectedTrackIndex = this.props.navigation.getParam('selectedTrackIndex');
-    this.setState({tracks, selectedTrack, selectedTrackIndex});
+    this.setState({ tracks, selectedTrack, selectedTrackIndex });
 
     const { url, library, embed } = this.getTrackUrl(selectedTrack);
-    
+
     Linking.canOpenURL(url)
       .then((canOpen) => {
         if (canOpen) {
@@ -69,24 +69,16 @@ class PlayerScreen extends Component {
     if (typeof url === 'object') {
       url = url.url;
     }
-    return {url, library, embed};
-  }
-
-  renderPlayer = () => {
-    return (
-      <Player 
-        tracks={this.state.tracks}
-        selectedTrack={this.state.selectedTrack}
-        selectedTrackIndex={this.state.selectedTrackIndex}
-      />
-    );
+    return { url, library, embed };
   }
 
   renderDetails = () => {
-    return <TrackDetailsView 
+    console.log('pp >>', this.props)
+    return <TrackDetailsView
       track={this.state.selectedTrack}
       tracks={this.state.tracks}
       trackIndex={this.state.selectedTrackIndex}
+      navigation={this.props.navigation}
     />
   }
 
@@ -95,4 +87,15 @@ class PlayerScreen extends Component {
   }
 }
 
-export default PlayerScreen
+// const mapStateToProps = (state) => {
+//   const { library, location, tracks } = state.tracks;
+//   return {
+//     library,
+//     location,
+//     tracks
+//   }
+// }
+
+// export default connect(mapStateToProps, null)(PlayerScreen);
+
+export default PlayerScreen;
