@@ -1,23 +1,63 @@
 import React, { Component } from 'react';
-import { View, Image, Text, Linking, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Image, Text, Linking, TouchableOpacity, Platform } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { colors } from '../../theme';
-import Header from '../ui/Header';
+import { colors } from '../theme';
+import Header from '../components/ui/Header';
+import { TrackDetailsStyle as styles } from '../styles'
 
-export default class TrackDetailsView extends Component {
+export default class TrackDetailsScreen extends Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
-      tracks: props.tracks || [],
-      trackIndex: props.trackIndex || 0,
-      track: props.track || null,
+      tracks: props.navigation.getParam('tracks') || [],
+      selectedTrack: props.navigation.getParam('selectedTrack') || null,
+      selectedTrackIndex: props.navigation.getParam('selectedTrackIndex') || null,
+      embed: false,
+      library: null,
+      linkOpened: false,
     }
   }
 
+  componentDidMount() {
+    const { url, library, embed } = this.getTrackUrl();
 
-  renderThumbnail = (track) => {
+    Linking.canOpenURL(url)
+      .then((canOpen) => {
+        if (canOpen) {
+          Linking.openURL(url);
+          this.setState({ linkOpened: true });
+        } else {
+          this.setState({ library, embed });
+        }
+      });
+  }
+
+  getTrackUrl = () => {
+    const track = this.state.selectedTrack;
+    let target;
+    let embed = false;
+    if (track.hasOwnProperty('embed')) {
+      target = track.embed;
+      embed = true;
+    } else {
+      target = track.links;
+    }
+
+    const keys = Object.keys(target);
+    const library = keys[0];
+    let url = target[library];
+
+    if (typeof url === 'object') {
+      url = url.url;
+    }
+    return { url, library, embed };
+  }
+
+
+  renderThumbnail = () => {
+    const track = this.state.selectedTrack;
     let thumbType = null;
     let thumbnail;
     if (track.hasOwnProperty('thumbnails')) {
@@ -32,10 +72,7 @@ export default class TrackDetailsView extends Component {
       thumbnail = <Image
         resizeMode='cover'
         source={{ uri: track.thumbnails[thumbType].url }}
-        style={{
-          height: '100%',
-          width: '100%'
-        }}
+        style={styles.thumbnail}
       />;
     } else {
       thumbnail = <FontAwesomeIcon icon="music" size={45} color={colors.white} />
@@ -44,7 +81,8 @@ export default class TrackDetailsView extends Component {
     return thumbnail;
   }
 
-  renderLinks = (track) => {
+  renderLinks = () => {
+    const track = this.state.selectedTrack;
     let links = [];
     links = Object.keys(track.links);
     links = links.map((key, index) => {
@@ -52,12 +90,11 @@ export default class TrackDetailsView extends Component {
         <TouchableOpacity
           key={index}
           onPress={() => {
-            console.log("Link >> ", track.links[key]);
             Linking.openURL(track.links[key])
           }}
         >
           <View style={styles.link}>
-            <FontAwesomeIcon icon="play-circle" size={16} style={{ marginRight: 5, color: colors.white }} />
+            <FontAwesomeIcon icon="play-circle" size={styles.linkIcon.fontSize} style={styles.linkIcon} />
             <Text style={styles.linkText}>{key}</Text>
           </View>
         </TouchableOpacity>
@@ -88,19 +125,14 @@ export default class TrackDetailsView extends Component {
   }
 
   render() {
-    const { track } = this.state;
+    const track = this.state.selectedTrack;
+    const headerStyle = Platform.OS === 'ios' ? styles.headerStyleIOS : styles.headerStyle;
     return (
       <View style={styles.container}>
         <Header
           leftIconPress={() => this.props.navigation.goBack()}
           leftIcon='caret-square-left'
-          style={{
-            position: 'absolute',
-            zIndex: 1,
-            backgroundColor: 'transparent',
-            height: 50,
-            width: '100%'
-          }}
+          style={headerStyle}
         />
         <View style={styles.thumbnailWrp}>
           {this.renderThumbnail(track)}
@@ -127,97 +159,5 @@ export default class TrackDetailsView extends Component {
       </View>
     )
   }
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f1f1f1'
-  },
-  thumbnailWrp: {
-    backgroundColor: '#333',
-    height: 350,
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  infoContainer: {
-    paddingLeft: 15,
-    paddingRight: 15,
-    paddingTop: 15,
-    paddingBottom: 15
-  },
-  infoWrp: {
-    marginTop: 20,
-    marginBottom: 20,
-    textAlign: 'center'
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  artistName: {
-    fontSize: 24,
-    fontWeight: '300',
-    textAlign: 'center'
-  },
-  controlsWrp: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    paddingTop: 40,
-    paddingBottom: 20
-  },
-  touchIcons: {
-    height: 50,
-    width: 50,
-    textAlign: 'center',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column'
-  },
-  touchIconsSmall: {
-    height: 30,
-    width: 30,
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  artistName: {
-    fontSize: 24,
-    fontWeight: '300',
-    textAlign: 'center'
-  },
-  playPauseIcons: {
-    fontSize: 38
-  },
-  backForwardIcons: {
-    fontSize: 25
-  },
-  linksWrp: {
-    flexDirection: 'row',
-    width: 280,
-    height: 100,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexWrap: 'wrap'
-  },
-  link: {
-    marginTop: 5,
-    marginBottom: 5,
-    marginLeft: 5,
-    marginRight: 5,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    borderRadius: 5,
-    padding: 10,
-    backgroundColor: '#007bff',
-  },
-  linkText: {
-    color: colors.white
-  }
-})
+}

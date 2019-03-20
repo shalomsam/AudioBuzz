@@ -64,7 +64,7 @@ class TracksScreen extends Component {
             renderItem={({ item, index }) => {
               return (
                 <TouchableOpacity onPress={() => {
-                  this.props.navigation.navigate('PlayerScreen', {
+                  this.props.navigation.navigate('TrackDetails', {
                     tracks: this.props.tracks,
                     selectedTrack: item,
                     selectedTrackIndex: index

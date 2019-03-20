@@ -5,7 +5,7 @@ import Thumbnail from '../thumbnail/Thumbnail';
 class TrackView extends PureComponent {
 
   render() {
-    const {track, rank} = this.props;
+    const { track, rank } = this.props;
     let imgSrc = null;
 
     if (track.hasOwnProperty('thumbnails')) {
@@ -24,7 +24,7 @@ class TrackView extends PureComponent {
         <View style={styles.col}>
           <Thumbnail
             resizeMode='cover'
-            source={{uri: imgSrc}} 
+            source={{ uri: imgSrc }}
             style={styles.img}
           />
         </View>
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   },
   detailsWrp: {
     paddingLeft: 10,
-    paddingRight: 10, 
+    paddingRight: 10,
     paddingTop: 10,
     paddingBottom: 10,
     width: 240
