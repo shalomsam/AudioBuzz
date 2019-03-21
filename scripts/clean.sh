@@ -1,12 +1,16 @@
 #!/bin/bash
 
-if [ -d "./ios/build" ]; then
+if [ -d "./ios" ]; then
   echo -n "Killing running metro server..."
   kill -9 $(lsof -t -i :8081)
   echo "[Done]"
-  echo -n "Clearing Build Directory..."
-  rm -rf ./ios/build/
-  echo "[Done]"
+  if [ -d "./ios/build" ]; then
+    echo -n "Clearing Build Directory..."
+    rm -rf ./ios/build/
+    echo "[Done]"
+  else 
+    echo "No Build Directory found...[ignoring]"
+  fi
   echo -n "Clearing Metro Bundler cache..."
   rm -rf /tmp/metro-bundler-cache-*
   echo "[Done]"

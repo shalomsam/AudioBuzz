@@ -16,6 +16,16 @@ export const TrackDetailsStyle = StyleSheet.create({
     flex: 1,
     backgroundColor: '#f1f1f1'
   },
+  youtubeStyle: {
+    alignSelf: 'stretch',
+    height: 300,
+  },
+  youtubeStyleIOS: {
+    alignSelf: 'flex-end',
+    height: 300,
+    width: '100%',
+    top: 20
+  },
   thumbnailWrp: {
     backgroundColor: '#333',
     height: 350,

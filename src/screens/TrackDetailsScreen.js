@@ -3,7 +3,9 @@ import { View, Image, Text, Linking, TouchableOpacity, Platform } from 'react-na
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { colors } from '../theme';
 import Header from '../components/ui/Header';
-import { TrackDetailsStyle as styles } from '../styles'
+import { TrackDetailsStyle as styles } from '../styles';
+import YouTube from 'react-native-youtube';
+import { REACT_APP_YOUTUBE_API } from 'react-native-dotenv';
 
 export default class TrackDetailsScreen extends Component {
 
@@ -22,14 +24,6 @@ export default class TrackDetailsScreen extends Component {
 
   componentDidMount() {
     const { url } = this.extractFromTrack();
-
-    Linking.canOpenURL(url)
-      .then((canOpen) => {
-        if (canOpen) {
-          Linking.openURL(url);
-          this.setState({ linkOpened: true });
-        }
-      });
   }
 
   extractFromTrack = () => {
@@ -47,6 +41,26 @@ export default class TrackDetailsScreen extends Component {
     }
 
     return { url, library, embed }
+  }
+
+  onError = (e) => {
+    console.log('YT Error >>', e);
+  }
+
+  renderYoutube = () => {
+    process.env.REACT_APP_YOUTUBE_API = REACT_APP_YOUTUBE_API || process.env.REACT_APP_YOUTUBE_API;
+
+    const youtubeStyles = Platform.OS === 'ios' ? styles.youtubeStyleIOS : styles.youtubeStyle;
+    return (
+      <YouTube
+        videoId={this.state.selectedTrack.youtubeId}
+        origin="http://www.youtube.com"
+        apiKey={process.env.REACT_APP_YOUTUBE_API}
+        play={true}
+        onError={this.onError}
+        style={youtubeStyles}
+      />
+    )
   }
 
   renderThumbnail = () => {
@@ -128,7 +142,11 @@ export default class TrackDetailsScreen extends Component {
           style={headerStyle}
         />
         <View style={styles.thumbnailWrp}>
-          {this.renderThumbnail()}
+          {
+            track.hasOwnProperty('youtubeId') ?
+              this.renderYoutube() :
+              this.renderThumbnail()
+          }
         </View>
         <View>
           <View style={styles.infoContainer}>

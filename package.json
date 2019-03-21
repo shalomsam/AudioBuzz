@@ -16,6 +16,7 @@
     "react-native-code-push": "^5.5.3",
     "react-native-gesture-handler": "^1.0.17",
     "react-native-svg": "^9.2.4",
+    "react-native-youtube": "^1.1.0",
     "react-navigation": "^3.3.2",
     "react-redux": "^6.0.1",
     "redux": "^4.0.1",
@@ -30,6 +31,7 @@
     "babel-jest": "24.1.0",
     "jest": "24.1.0",
     "metro-react-native-babel-preset": "0.52.0",
+    "react-native-dotenv": "^0.2.0",
     "react-test-renderer": "16.6.3"
   },
   "jest": {

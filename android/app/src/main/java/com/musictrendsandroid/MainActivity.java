@@ -1,6 +1,10 @@
 package com.musictrendsandroid;
 
 import com.facebook.react.ReactActivity;
+import com.inprogress.reactnativeyoutube.ReactNativeYouTube;
+import com.horcrux.svg.SvgPackage;
+import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+import com.microsoft.codepush.react.CodePush;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
 import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
