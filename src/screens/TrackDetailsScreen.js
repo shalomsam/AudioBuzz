@@ -5,7 +5,10 @@ import { colors } from '../theme';
 import Header from '../components/ui/Header';
 import { TrackDetailsStyle as styles } from '../styles';
 import YouTube from 'react-native-youtube';
-import { REACT_APP_YOUTUBE_API } from 'react-native-dotenv';
+import * as dotEnv from 'react-native-dotenv';
+
+// To prevent build failure due to non-existence of .env file
+const REACT_APP_YOUTUBE_API = dotEnv.hasOwnProperty('REACT_APP_YOUTUBE_API') ? dotEnv.REACT_APP_YOUTUBE_API : null;
 
 export default class TrackDetailsScreen extends Component {
 
@@ -23,7 +26,7 @@ export default class TrackDetailsScreen extends Component {
   }
 
   componentDidMount() {
-    const { url } = this.extractFromTrack();
+
   }
 
   extractFromTrack = () => {
