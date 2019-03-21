@@ -21,40 +21,33 @@ export default class TrackDetailsScreen extends Component {
   }
 
   componentDidMount() {
-    const { url, library, embed } = this.getTrackUrl();
+    const { url } = this.extractFromTrack();
 
     Linking.canOpenURL(url)
       .then((canOpen) => {
         if (canOpen) {
           Linking.openURL(url);
           this.setState({ linkOpened: true });
-        } else {
-          this.setState({ library, embed });
         }
       });
   }
 
-  getTrackUrl = () => {
+  extractFromTrack = () => {
     const track = this.state.selectedTrack;
-    let target;
     let embed = false;
-    if (track.hasOwnProperty('embed')) {
-      target = track.embed;
+    let url;
+    let library = 'youtube';
+    if (track.hasOwnProperty('embed') && track.embed.hasOwnProperty('youtube')) {
+      url = track.embed.youtube.url;
       embed = true;
     } else {
-      target = track.links;
+      const libraries = Object.keys(track.links);
+      library = libraries[0];
+      url = track.links[library];
     }
 
-    const keys = Object.keys(target);
-    const library = keys[0];
-    let url = target[library];
-
-    if (typeof url === 'object') {
-      url = url.url;
-    }
-    return { url, library, embed };
+    return { url, library, embed }
   }
-
 
   renderThumbnail = () => {
     const track = this.state.selectedTrack;
@@ -109,24 +102,24 @@ export default class TrackDetailsScreen extends Component {
   }
 
   onBack = () => {
-    if (this.state.trackIndex !== 0) {
-      const index = this.state.trackIndex - 1;
+    if (this.state.selectedTrackIndex !== 0) {
+      const index = this.state.selectedTrackIndex - 1;
       const track = this.state.tracks[index];
-      this.setState({ trackIndex: index, track: track });
+      this.setState({ selectedTrackIndex: index, selectedTrack: track });
     }
   }
 
   onForward = () => {
-    if (this.state.trackIndex !== (this.state.tracks.length - 1)) {
-      const index = this.state.trackIndex + 1;
+    if (this.state.selectedTrackIndex !== (this.state.tracks.length - 1)) {
+      const index = this.state.selectedTrackIndex + 1;
       const track = this.state.tracks[index];
-      this.setState({ trackIndex: index, track: track });
+      this.setState({ selectedTrackIndex: index, selectedTrack: track });
     }
   }
 
   render() {
     const track = this.state.selectedTrack;
-    const headerStyle = Platform.OS === 'ios' ? styles.headerStyleIOS : styles.headerStyle;
+    const headerStyle = Platform.OS === 'ios' ? [styles.headerStyle, styles.headerStyleIOS] : styles.headerStyle;
     return (
       <View style={styles.container}>
         <Header
@@ -135,7 +128,7 @@ export default class TrackDetailsScreen extends Component {
           style={headerStyle}
         />
         <View style={styles.thumbnailWrp}>
-          {this.renderThumbnail(track)}
+          {this.renderThumbnail()}
         </View>
         <View>
           <View style={styles.infoContainer}>
@@ -149,7 +142,7 @@ export default class TrackDetailsScreen extends Component {
               <FontAwesomeIcon icon="step-backward" size={styles.backForwardIcons.fontSize} />
             </TouchableOpacity>
 
-            {this.renderLinks(track)}
+            {this.renderLinks()}
 
             <TouchableOpacity onPress={this.onForward} style={[styles.touchIcons, styles.touchIconsSmall]}>
               <FontAwesomeIcon icon="step-forward" size={styles.backForwardIcons.fontSize} />
