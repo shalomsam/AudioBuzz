@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, FlatList, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, FlatList, TouchableOpacity, Image } from 'react-native';
 import { connect } from 'react-redux';
 import { LoadingView } from '../components/views/LoadingView';
 import { TrackView } from '../components/views/TrackView';
@@ -8,6 +8,7 @@ import { libraryToIconName, libraryToName } from '../utils';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import Header from "../components/ui/Header";
 import images from '../assets/images';
+import { TracksScreenStyles as styles } from '../styles';
 
 class TracksScreen extends Component {
 
@@ -56,7 +57,7 @@ class TracksScreen extends Component {
           title={libraryToName(this.props.navigation.state.params.library, this.props.location)}
           navigation={this.props.navigation}
         />
-        <View>
+        <View style={styles.wrp}>
           <FlatList
             contentContainerStyle={styles.containerStyle}
             data={this.props.tracks}
@@ -88,15 +89,6 @@ class TracksScreen extends Component {
     return this.renderTracks();
   }
 }
-
-const styles = StyleSheet.create({
-  containerStyle: {
-    paddingTop: 20,
-    paddingBottom: 20,
-    paddingLeft: 15,
-    paddingRight: 15
-  }
-});
 
 const mapStateToProps = (state) => {
   const { library, location, tracks } = state.tracks;
