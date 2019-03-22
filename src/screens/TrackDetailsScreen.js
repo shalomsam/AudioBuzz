@@ -52,6 +52,7 @@ export default class TrackDetailsScreen extends Component {
         videoId={this.state.selectedTrack.youtubeId}
         origin="http://www.youtube.com"
         apiKey={process.env.REACT_APP_YOUTUBE_API}
+        controls={1}
         play={true}
         onError={this.onError}
         style={youtubeStyles}

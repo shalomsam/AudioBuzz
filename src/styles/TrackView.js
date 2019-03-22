@@ -1,15 +1,17 @@
 import { StyleSheet } from 'react-native';
+import { theme } from '../theme';
 
 export const TrackViewStyles = StyleSheet.create({
   box: {
     flex: 1,
     borderRadius: 5,
     borderWidth: 1,
-    borderColor: '#d6d7da',
+    borderColor: theme.borderColor,
     marginBottom: 10,
     flexDirection: 'row',
     flexWrap: 'nowrap',
-    height: '100%'
+    height: '100%',
+    backgroundColor: theme.boxBg
   },
   col: {
     height: '100%'
@@ -20,13 +22,13 @@ export const TrackViewStyles = StyleSheet.create({
   },
   rankWrp: {
     justifyContent: 'center',
-    paddingLeft: 7,
-    paddingRight: 7,
+    paddingLeft: 5,
+    paddingRight: 5,
   },
   rank: {
-    fontSize: 28,
-    fontWeight: '800',
-    width: 46,
+    fontSize: 26,
+    fontWeight: '300',
+    width: 50,
     textAlign: 'center',
   },
   detailsWrp: {

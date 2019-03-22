@@ -1,10 +1,12 @@
 import { StyleSheet, Platform } from 'react-native';
+import { theme } from '../theme';
 
 const paddingBottom = Platform.OS === 'android' ? 90 : 1;
 
 export const TracksScreenStyles = StyleSheet.create({
   wrp: {
-    paddingBottom: paddingBottom
+    paddingBottom: paddingBottom,
+    backgroundColor: theme.mainWrapperBg
   },
   containerStyle: {
     paddingTop: 20,

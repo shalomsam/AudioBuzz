@@ -9,5 +9,8 @@ export const theme = {
   thumbnailBgColor: colors.darkGrey,
   thumbnailColor: colors.white,
   fontColor: '#333333',
-  borderColor: colors.grey
+  borderColor: colors.grey,
+  mainWrapperBg: '#f1f1f1',
+  boxBg: colors.white,
+  drawerImageWrp: '#dedede'
 };
