@@ -2,7 +2,9 @@
 
 if [ -d "./ios" ]; then
   echo -n "Killing running metro server..."
-  kill -9 $(lsof -t -i :8081)
+  if [[ $(lsof -t -i :8081) ]]; then
+    kill -9 $(lsof -t -i :8081)
+  fi
   echo "[Done]"
   if [ -d "./ios/build" ]; then
     echo -n "Clearing Build Directory..."
