@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { colors } from '../theme';
 import Header from '../components/ui/Header';
 import { TrackDetailsStyle as styles } from '../styles';
-import YouTube from 'react-native-youtube';
+import YouTube, { YouTubeStandaloneAndroid } from 'react-native-youtube';
 import { REACT_APP_YOUTUBE_API } from 'react-native-dotenv';
 
 export default class TrackDetailsScreen extends Component {
@@ -19,7 +19,13 @@ export default class TrackDetailsScreen extends Component {
       embed: false,
       library: null,
       linkOpened: false,
+      playing: false,
+      isMounted: false,
     }
+  }
+
+  componentDidMount() {
+    this.setState({ isMounted: true, playing: true })
   }
 
   extractFromTrack = () => {
@@ -40,7 +46,10 @@ export default class TrackDetailsScreen extends Component {
   }
 
   onError = (e) => {
-    console.log('YT Error >>', e);
+    if (e.error === 'UNAUTHORIZED_OVERLAY' || e.error === 'PLAYER_VIEW_TOO_SMALL') {
+      console.log('YT Error >>', e);
+      this.setState({ playing: true });
+    }
   }
 
   renderYoutube = () => {
@@ -53,7 +62,7 @@ export default class TrackDetailsScreen extends Component {
         origin="http://www.youtube.com"
         apiKey={process.env.REACT_APP_YOUTUBE_API}
         controls={1}
-        play={true}
+        play={this.state.playing}
         onError={this.onError}
         style={youtubeStyles}
       />

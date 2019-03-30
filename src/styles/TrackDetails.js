@@ -3,9 +3,9 @@ import { colors } from '../theme';
 
 export const TrackDetailsStyle = StyleSheet.create({
   headerStyle: {
-    position: 'absolute',
-    zIndex: 1,
-    backgroundColor: 'transparent',
+    // position: 'absolute',
+    // zIndex: 1,
+    // backgroundColor: 'transparent',
     height: 50,
     width: '100%'
   },
