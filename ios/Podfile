@@ -39,6 +39,9 @@ target 'AudioBuzz' do
   # Pods for AudioBuzz
   pod 'CodePush', :path => '../node_modules/react-native-code-push'
 
+
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
+
   target 'AudioBuzzTests' do
     inherit! :search_paths
     # Pods for testing

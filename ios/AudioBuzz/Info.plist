@@ -5,7 +5,7 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>en</string>
     <key>CFBundleDisplayName</key>
-    <string>MusicTrends</string>
+    <string>AudioBuzz</string>
     <key>CFBundleExecutable</key>
     <string>$(EXECUTABLE_NAME)</string>
     <key>CFBundleIdentifier</key>
@@ -56,6 +56,6 @@
     <key>UIViewControllerBasedStatusBarAppearance</key>
     <false/>
     <key>CodePushDeploymentKey</key>
-    <string>__gO89mj7UHT0xI15f4XbBqhhyE0SJMsnU5P4</string>
+    <string>deployment-key-here</string>
   </dict>
 </plist>
