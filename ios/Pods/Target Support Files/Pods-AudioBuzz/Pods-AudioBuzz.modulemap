@@ -1,0 +1,6 @@
+framework module Pods_AudioBuzz {
+  umbrella header "Pods-AudioBuzz-umbrella.h"
+
+  export *
+  module * { export * }
+}

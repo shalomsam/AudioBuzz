@@ -11,7 +11,7 @@ export default Drawer = (props) => {
           source={images.turntable}
           style={{ marginTop: 10 }}
         />
-        <Text>MusicTrends</Text>
+        <Text>AudioBuzz</Text>
       </View>
       <View style={{ flex: 6 }}>
         <DrawerItems {...props} />
