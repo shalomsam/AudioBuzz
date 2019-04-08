@@ -92,7 +92,7 @@ class TracksScreen extends Component {
 const styles = StyleSheet.create({
   containerStyle: {
     paddingTop: 20,
-    paddingBottom: 20,
+    paddingBottom: 100,
     paddingLeft: 15,
     paddingRight: 15
   }

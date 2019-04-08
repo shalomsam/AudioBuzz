@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react';
-import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import Thumbnail from '../thumbnail/Thumbnail';
 
 class TrackView extends PureComponent {
 
   render() {
-    const {track, rank} = this.props;
+    const { track, rank } = this.props;
     let imgSrc = null;
 
     if (track.hasOwnProperty('thumbnails')) {
@@ -24,13 +24,13 @@ class TrackView extends PureComponent {
         <View style={styles.col}>
           <Thumbnail
             resizeMode='cover'
-            source={{uri: imgSrc}} 
+            source={{ uri: imgSrc }}
             style={styles.img}
           />
         </View>
         <View style={[styles.col, styles.detailsWrp]}>
-          <Text style={styles.title}>{track.title}</Text>
-          <Text>{track.artist.name}</Text>
+          <Text numberOfLines={2} style={styles.title}>{track.title}</Text>
+          <Text numberOfLines={1}>{track.artist.name}</Text>
         </View>
       </View>
     );
@@ -57,21 +57,22 @@ const styles = StyleSheet.create({
   },
   rankWrp: {
     justifyContent: 'center',
-    paddingLeft: 10,
-    paddingRight: 10,
+    paddingLeft: 5,
+    paddingRight: 5,
   },
   rank: {
-    fontSize: 32,
-    fontWeight: '800',
-    width: 40,
-    textAlign: 'center'
+    fontSize: 28,
+    fontWeight: '300',
+    width: 50,
+    textAlign: 'center',
+    flexWrap: 'nowrap'
   },
   detailsWrp: {
     paddingLeft: 10,
-    paddingRight: 10, 
-    paddingTop: 10,
-    paddingBottom: 10,
-    width: 240
+    paddingRight: 10,
+    paddingTop: 5,
+    paddingBottom: 5,
+    width: 200
   },
   title: {
     fontWeight: '800',
