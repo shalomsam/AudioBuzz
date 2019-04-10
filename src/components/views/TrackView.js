@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontWeight: '800',
-    fontSize: 18
+    fontSize: 14
   }
 });
 
