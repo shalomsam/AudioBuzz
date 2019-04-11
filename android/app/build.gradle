@@ -4,18 +4,6 @@ apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.grad
 import com.android.build.OutputFile
 import groovy.json.JsonSlurper
 
-def getNpmVersion() {
-    def nodeFile = new File("$rootDir/../package.json")
-    def packageJson = new JsonSlurper().parseText(nodeFile.text)
-    return packageJson["version"]
-}
-
-/* calculated from git commits to give sequential integers */
-def getGitVersion() {
-    def process = "git rev-list master --first-parent --count".execute()
-    return process.text.toInteger()
-}
-
 /**
  * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets
  * and bundleReleaseJsAndAssets).
@@ -92,6 +80,20 @@ project.ext.react = [
 
 apply from: "../../node_modules/react-native/react.gradle"
 apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
+
+System.println "rootDir -> $rootDir "
+
+def getNpmVersion() {
+    def nodeFile = new File("$rootDir/../package.json")
+    def packageJson = new JsonSlurper().parseText(nodeFile.text)
+    return packageJson["version"]
+}
+
+/* calculated from git commits to give sequential integers */
+def getGitVersion() {
+    def process = "git rev-list master --first-parent --count".execute()
+    return process.text.toInteger()
+}
 
 /**
  * Set this to true to create two separate APKs instead of one:
