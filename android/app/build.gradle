@@ -90,9 +90,9 @@ def getNpmVersion() {
 }
 
 /* calculated from git commits to give sequential integers */
-def getGitVersion() {
-    def process = "git rev-list master --first-parent --count".execute()
-    return process.text.toInteger()
+def getVersionCode() {
+    def (major, minor, patch) = getNpmVersion().tokenize('.')
+    return Integer.parseInt(major) * 10000 + Integer.parseInt(minor) * 100 + Integer.parseInt(patch)
 }
 
 /**
@@ -110,8 +110,8 @@ def enableSeparateBuildPerCPUArchitecture = false
  */
 def enableProguardInReleaseBuilds = false
 
-def userVer = getNpmVersion()
-def googleVer = getGitVersion()
+def versionString = getNpmVersion()
+def versionInt = getVersionCode()
 
 android {
     compileSdkVersion 28
@@ -119,8 +119,8 @@ android {
         applicationId "in.audiobuzz.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode googleVer
-        versionName userVer
+        versionCode versionInt
+        versionName versionString
     }
     splits {
         abi {
