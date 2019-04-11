@@ -5,7 +5,7 @@ import com.android.build.OutputFile
 import groovy.json.JsonSlurper
 
 def getNpmVersion() {
-    def nodeFile = new File('../package.json')
+    def nodeFile = new File("$rootDir/../package.json")
     def packageJson = new JsonSlurper().parseText(nodeFile.text)
     return packageJson["version"]
 }
