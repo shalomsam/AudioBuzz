@@ -16,7 +16,13 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android": {
+      "package": "in.audiobuzz.app",
+      "googleServicesFile": "./google-services.json"
+    },
     "ios": {
+      "bundleIdentifier": "in.audiobuzz.app",
+      "googleServicesFile": "./google-services.json",
       "supportsTablet": true
     },
     "web": {
